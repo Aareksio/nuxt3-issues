@@ -11,7 +11,7 @@
 
 <script setup>
   const $route = useRoute()
-  const { data: movie } = await useAsyncData(`movie:${$route.params.id}`, () => $fetch(`/api/movie/${$route.params.id}`))
+  const { data: movie } = useAsyncData(`movie:${$route.params.id}`, () => $fetch(`/api/movie/${$route.params.id}`))
 
   // TODO: Display proper 404 when accessing unknown movie id
 
